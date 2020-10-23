@@ -36,4 +36,11 @@ public class TicTacToeSpec {
     public void givenFirstTurnWhenNextPlayerThenX(){
         assertEquals('X', ticTacToe.nextPlayer());
     }
+    @Test
+    public void givenLastTurnWasXorOWhenNextPlayerThenOorX(){
+        ticTacToe.play(1,1);
+        assertEquals('O',ticTacToe.nextPlayer());
+        ticTacToe.play(2,1);
+        assertEquals('X',ticTacToe.nextPlayer());
+    }
 }
