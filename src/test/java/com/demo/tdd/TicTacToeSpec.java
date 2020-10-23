@@ -3,6 +3,7 @@ package com.demo.tdd;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
+import static org.junit.Assert.*;
 import org.junit.rules.ExpectedException;
 
 public class TicTacToeSpec {
@@ -30,5 +31,9 @@ public class TicTacToeSpec {
         ticTacToe.play(2,1);
         exception.expect(RuntimeException.class);
         ticTacToe.play(2,1);
+    }
+    @Test
+    public void givenFirstTurnWhenNextPlayerThenX(){
+        assertEquals('X', ticTacToe.nextPlayer());
     }
 }
