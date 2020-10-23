@@ -2,6 +2,7 @@ package com.demo.tdd;
 
 public class TicTacToe {
 
+    private char lastPlayer = '\0';
     private Character[][] board = {
             {'\0', '\0', '\0'},
             {'\0', '\0', '\0'},
@@ -11,6 +12,7 @@ public class TicTacToe {
         checkAxis(x);
         checkAxis(y);
         setBox(x, y);
+        lastPlayer = nextPlayer();
     }
     private void checkAxis(int axis) {
         if (axis < 1 || axis > 3) {
@@ -25,6 +27,9 @@ public class TicTacToe {
         }
     }
     public char nextPlayer(){
+        if (lastPlayer == 'X') {
+            return 'O';
+        }
         return 'X';
     }
 }
