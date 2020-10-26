@@ -76,5 +76,13 @@ public class TicTacToeSpec {
         String actual = ticTacToe.play(3, 3); // X
         assertEquals("X is the winner", actual);
     }
-
+    @Test
+    public void whenPlayAndBottomTopDiagonalLineThenWinner() { //测试另一条对角线
+        ticTacToe.play(1, 3); // X
+        ticTacToe.play(1, 1); // O
+        ticTacToe.play(2, 2); // X
+        ticTacToe.play(1, 2); // O
+        String actual = ticTacToe.play(3, 1); // X
+        assertEquals("X is the winner", actual);
+    }
 }
