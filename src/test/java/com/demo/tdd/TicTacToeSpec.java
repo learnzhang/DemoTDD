@@ -76,4 +76,5 @@ public class TicTacToeSpec {
         String actual = ticTacToe.play(3, 3); // X
         assertEquals("X is the winner", actual);
     }
+
 }
