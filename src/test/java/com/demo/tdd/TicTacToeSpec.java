@@ -58,7 +58,7 @@ public class TicTacToeSpec {
         assertEquals("X is the winner", actual);
     }
     @Test
-    public void whenPlayAndWholeVerticalLineThenWinner() {
+    public void whenPlayAndWholeVerticalLineThenWinner() { //测试垂直方向是否获胜
         ticTacToe.play(2, 1); // X
         ticTacToe.play(1, 1); // O
         ticTacToe.play(3, 1); // X
@@ -67,4 +67,5 @@ public class TicTacToeSpec {
         String actual = ticTacToe.play(1, 3); // O
         assertEquals("O is the winner", actual);
     }
+
 }
